@@ -1,0 +1,289 @@
+@import '~antd/es/style/themes/default.less';
+
+.accountsContainer {
+  padding: 24px 24px 12px 24px;
+
+  .walletSettings_content {
+    .walletSettings {
+      padding: 20px 24px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 36px rgba(0, 82, 255, 0.1);
+      backdrop-filter: blur(20px);
+
+      .introduce {
+        display: flex;
+        margin-bottom: 16px;
+        .info {
+          margin-left: 8px;
+          color: #212325;
+          font-weight: 400;
+          font-size: 14px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+        }
+      }
+
+      .settings {
+        display: flex;
+
+        .oneArraw {
+          margin-right: 24px;
+          margin-left: 8px;
+          cursor: pointer;
+        }
+
+        .twoArraw {
+          margin-left: 8px;
+          cursor: pointer;
+        }
+
+        .bts {
+          color: #295ef3;
+          font-weight: 300;
+          font-size: 14px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .accountsValue {
+    margin-top: 24px;
+
+    .header {
+      display: flex;
+
+      .title {
+        color: #212325;
+        font-weight: 400;
+        font-size: 24px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+      }
+      .value {
+        margin-top: 5px;
+        margin-left: 8px;
+        color: #a9abb1;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        text-transform: capitalize;
+      }
+    }
+
+    .details {
+      margin-top: 16px;
+      padding: 24px 26px;
+      background: #fcfdff;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(138, 167, 222, 0.1);
+
+      .type {
+        display: flex;
+        margin-bottom: 8px;
+        .name {
+          margin-left: 12px;
+          color: #212325;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+        }
+      }
+      .totalValue {
+        margin-left: 25px;
+        color: #212325;
+        font-weight: 500;
+        font-size: 32px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .outflowing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    .tableRouter {
+      display: flex;
+      justify-items: center;
+      .title {
+        color: #212325;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+      .icon_right {
+        margin-right: 12px;
+        margin-left: 12px;
+      }
+      .pageTwoTitle {
+        display: flex;
+        .icon {
+          margin-right: 8px;
+        }
+        .name {
+          color: #212325;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .outInfo {
+      display: flex;
+      height: 32px;
+      padding: 0 16px;
+      line-height: 32px;
+      background: #fcfdff;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(138, 167, 222, 0.1);
+
+      img {
+        width: 16px;
+        cursor: pointer;
+      }
+
+      .outType {
+        margin-right: 8px;
+        margin-left: 6px;
+        color: #a9abb1;
+        font-weight: 300;
+        font-size: 12px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+      .outValue {
+        color: #212325;
+        font-weight: 400;
+        font-size: 12px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .valutList {
+    display: flex;
+    display: -webkit-flex;
+    margin: 10px 0;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      margin-right: 16px;
+      background: #fcfdff;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(138, 167, 222, 0.1);
+    }
+
+    .right {
+      flex: 0 1 322px;
+      min-height: 600px;
+
+      .linChart {
+        width: 322px;
+        height: 304px;
+        background: #fcfdff;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 167, 222, 0.1);
+
+        .title {
+          padding: 24px 24px 16px 24px;
+          color: #212325;
+          font-weight: 500;
+          font-size: 16px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+        }
+        .values {
+          padding: 0 24px;
+          .total {
+            color: #212325;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            text-transform: capitalize;
+          }
+          .profit {
+            margin-left: 4px;
+            color: #00bf80;
+            font-weight: 400;
+            font-size: 12px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            text-transform: capitalize;
+          }
+        }
+
+        .btns {
+          display: flex;
+          padding: 5px 24px 0 24px;
+          div {
+            width: 40px;
+            height: 24px;
+            margin-right: 10px;
+            color: #212325;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            line-height: 24px;
+            text-align: center;
+            text-transform: capitalize;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          div.select {
+            color: #fff;
+            background: #212325;
+          }
+        }
+      }
+
+      .pieChart {
+        width: 322px;
+        height: 276px;
+        margin-top: 16px;
+        background: #fcfdff;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 167, 222, 0.1);
+
+        .title {
+          padding: 24px 24px 0 24px;
+          color: #212325;
+          font-weight: 500;
+          font-size: 16px;
+          font-family: 'IBM Plex Sans';
+          font-style: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

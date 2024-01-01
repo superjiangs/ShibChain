@@ -1,0 +1,97 @@
+.build-modal {
+    .ant-modal {
+        color: #fff;
+
+        .ant-modal-content {
+            background: #1A1F2E;
+            box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
+
+            .ant-modal-body {
+                padding: 20px 35px 35px 35px;
+            }
+        }
+    }
+
+    .main {
+        .top {
+            display: flex;
+            align-items: center;
+
+            img:last-child {
+                margin-left: 10px;
+            }
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+
+            &>span {
+                color: #FFF;
+                font-family: Sora;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.72px;
+                text-transform: uppercase;
+                width: 270px;
+            }
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+
+                &>p {
+                    color: #FFF;
+                    font-family: Sora;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.36px;
+                    text-transform: uppercase;
+                    width: 200px;
+                    margin: 0;
+                }
+
+                &>span {
+                    color: #FFF;
+                    font-family: Sora;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.36px;
+                    flex: 1;
+                    margin-left: 15px;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            margin-top: 50px;
+
+            .item {
+                display: flex;
+                &:last-child {
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+}

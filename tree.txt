@@ -1,0 +1,134 @@
+生成项目树结构(参考：https://segmentfault.com/a/1190000022900724)
+	一、
+	     安装tree-node-cli
+     	     npm install -g tree-node-cli
+	二、
+	     treee -L 3 -I "node_modules|.idea|objects|.git" -a --dirs-first
+	三、
+	     复制控制太内容
+
+umiadminjsx						项目名称
+├── config  						配置文件
+│   ├── config.dev.js					开发阶段运行使用的.umirc.js
+│   ├── config.js						上线阶段运行使用的.umirc.js
+│   ├── defaultSettings.js				默认设置
+│   ├── proxy.js						.umirc.js的proxy
+│   └── routes.js						路由数据
+├── mock							模拟数据
+│   ├── listTableList.js				
+│   ├── notices.js
+│   ├── route.js
+│   └── user.js
+├── public							公共的图片文件夹
+│   ├── icons
+│   │   ├── icon-128x128.png
+│   │   ├── icon-192x192.png
+│   │   └── icon-512x512.png
+│   ├── CNAME
+│   ├── favicon.ico
+│   ├── home_bg.png
+│   └── pro_icon.svg
+├── src								源代码
+│   ├── .umi
+│   │   ├── .cache
+│   │   ├── core
+│   │   ├── plugin-antd-icon
+│   │   ├── plugin-dva
+│   │   ├── plugin-helmet
+│   │   ├── plugin-initial-state
+│   │   ├── plugin-locale
+│   │   ├── plugin-model
+│   │   ├── plugin-request
+│   │   └── umi.ts
+│   ├── assets						静态资源
+│   │   └── logo.svg
+│   ├── components					组件
+│   │   ├── Authorized
+│   │   ├── GlobalHeader
+│   │   ├── HeaderDropdown
+│   │   ├── HeaderSearch
+│   │   ├── NoticeIcon
+│   │   └── PageLoading
+│   ├── e2e							端到端测试
+│   │   ├── __mocks__
+│   │   └── baseLayout.e2e.js
+│   ├── layouts						布局
+│   │   ├── BasicLayout.jsx
+│   │   ├── BlankLayout.jsx
+│   │   ├── SecurityLayout.jsx
+│   │   ├── UserLayout.jsx
+│   │   └── UserLayout.less
+│   ├── locales						国际化
+│   │   ├── en-US
+│   │   ├── id-ID
+│   │   ├── ja-JP
+│   │   ├── pt-BR
+│   │   ├── zh-CN
+│   │   ├── zh-TW
+│   │   ├── en-US.js
+│   │   ├── id-ID.js
+│   │   ├── ja-JP.js
+│   │   ├── pt-BR.js
+│   │   ├── zh-CN.js
+│   │   └── zh-TW.js
+│   ├── models						数据源
+│   │   ├── global.js
+│   │   ├── login.js
+│   │   ├── setting.js
+│   │   └── user.js
+│   ├── pages						页面
+│   │   ├── TableList
+│   │   ├── User
+│   │   ├── 404.jsx
+│   │   ├── Admin.jsx
+│   │   ├── document.ejs
+│   │   ├── Welcome.jsx
+│   │   └── Welcome.less
+│   ├── services					接口
+│   │   ├── login.js
+│   │   └── user.js
+│   ├── utils						工具类
+│   │   ├── authority.js
+│   │   ├── Authorized.js
+│   │   ├── request.js
+│   │   ├── utils.js
+│   │   ├── utils.less
+│   │   └── utils.test.js
+│   ├── global.jsx					全局jsx
+│   ├── global.less					全局less
+│   ├── manifest.json
+│   └── service-worker.js
+├── template						模版
+│   ├── Template						class的jsx的写法	
+│   │   ├── demo
+│   │   ├── config.js
+│   │   ├── docgen.js
+│   │   ├── index.jsx
+│   │   ├── index.less
+│   │   └── temp.md
+│   └── TemplateHook					function的jsx的写法
+│       ├── demo
+│       ├── config.js
+│       ├── docgen.js
+│       ├── index.jsx
+│       ├── index.less
+│       └── temp.md
+├── tests							测试文件
+│   ├── beforeTest.js
+│   ├── getBrowser.js
+│   ├── PuppeteerEnvironment.js
+│   └── run-tests.js
+├── .editorconfig		编辑器编码规范配置文件,用于高度编译器本项目的一些编码规范,
+├── .eslintcache
+├── .eslintignore		eslint不匹配的文件
+├── .eslintrc.js		eslint配置文件
+├── .prettierignore		设置不被prettierrc格式化的文件和文件夹
+├── .prettierrc			设置prettierrc规范
+├── .stylelintrc.js		stylelint配置文件
+├── jest.config.js		jest配置文件
+├── jsconfig.json		目录中存在jsconfig.json文件表示该目录是JavaScript项目的根目录
+├── ModifyTheSteps.md	项目修改步骤文件
+├── package-lock.json	自动生成依赖配置文件
+├── package.json		npm依赖配置文件
+├── README.md		项目介绍
+└── verify-commit.js    commit-msg提交规范文件
