@@ -118,13 +118,13 @@
 
   .banner {
     width: 1200px;
+    height: 798px;
     margin: 0px auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     .left {
       max-width: 525px;
+      margin-top: 134px;
 
       h2 {
         color: #FFF;
@@ -207,6 +207,26 @@
           padding: 15px;
           background: #fff;
         }
+      }
+    }
+    .banner_right {
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 549px;
+      flex: 1;
+      .stars {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 539px;
+        height: 528px;
+      }
+      .doges {
+        position: absolute;
+        right: 0;
+        top: 250px;
+        z-index: 9;
       }
     }
   }

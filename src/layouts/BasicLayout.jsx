@@ -3,7 +3,8 @@ import { FormattedMessage, getAllLocales, getLocale, setLocale } from 'umi';
 import logo from '../assets/logo.png';
 import join_bg from '../assets/join_bg.png';
 import join_bg_h5 from '../assets/join_bg_h5.png';
-import banner_right from '../assets/banner_right.svg';
+import doges from '../assets/doge.svg';
+import stars from '../assets/stars.png';
 import rowOne from '../assets/rowOne.svg';
 import rowTwo from '../assets/rowTwo.svg';
 import rowThree from '../assets/rowThree.svg';
@@ -36,6 +37,9 @@ const BasicLayout = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLanguage, setIsLanguage] = useState(false);
   const [mainnetInfoH5, setMainnetInfoH5] = useState(false);
+  const containerRef = useRef(document.body);
+  const dogeRef = useRef(null);
+  const multiple = 20;
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -54,6 +58,48 @@ const BasicLayout = (props) => {
     setExpand(false)
     setIsLanguage(false)
   };
+
+  // useEffect(() => {
+  //   const container = containerRef.current;
+  //   const element = dogeRef.current;
+
+  //   const transformElement = (x, y) => {
+  //     const box = element.getBoundingClientRect();
+  //     const calcX = -(y - box.y - box.height / 2) / multiple;
+  //     const calcY = (x - box.x - box.width / 2) / multiple;
+
+  //     element.style.transform = `rotateX(${calcX}deg) rotateY(${calcY}deg)`;
+  //   };
+
+  //   const handleMouseMove = (e) => {
+  //     window.requestAnimationFrame(function () {
+  //       transformElement(e.clientX, e.clientY);
+  //     });
+  //   };
+
+  //   container.addEventListener('mousemove', handleMouseMove);
+
+  //   return () => {
+  //     container.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const xAxis = (window.innerWidth / 2 - e.pageX) / 25 * -1;
+      const yAxis = (window.innerHeight / 2 - e.pageY) / 25 * -1;
+
+      if (dogeRef.current) {
+        dogeRef.current.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [dogeRef]);
 
   return (
     <>
@@ -187,7 +233,10 @@ const BasicLayout = (props) => {
               <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" className={styles.btn2}><FormattedMessage id="home.banner.btn2" /></a>
             </div>
           </div>
-          <img src={banner_right} />
+          <div className={styles.banner_right}>
+            <img src={stars} className={styles.stars} />
+            <img src={doges} ref={dogeRef} className={styles.doges} />
+          </div>
         </div>
       </div>
 
