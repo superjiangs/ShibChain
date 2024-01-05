@@ -62,27 +62,36 @@ const BasicLayout = (props) => {
   const addNetwork = () => {
     const chainIdDecimal = 117722;
     const chainIdHex = '0x' + chainIdDecimal.toString(16);
-    window.ethereum.request({
-      method: 'wallet_addEthereumChain',
-      params: [{
-        chainId: chainIdHex,
-        chainName: "SHIBCHAIN",
-        rpcUrls: [
-          'https://zkevm.shibchain.io',
-        ],
-        // iconUrls: [
-        //     'https://testnet.hecoinfo.com/favicon.png'
-        // ],
-        blockExplorerUrls: [
-          'https://explorer.shibchain.io'
-        ],
-        nativeCurrency: {
-          name: 'SHIB',
-          symbol: 'SHIB',
-          decimals: 18
-        }
-      }]
-    })
+    const ethereum = window.ethereum;
+    if (ethereum) {
+      try {
+        ethereum.request({
+          method: 'wallet_addEthereumChain',
+          params: [{
+            chainId: chainIdHex,
+            chainName: "SHIBCHAIN",
+            rpcUrls: [
+              'https://zkevm.shibchain.io',
+            ],
+            // iconUrls: [
+            //     'https://testnet.hecoinfo.com/favicon.png'
+            // ],
+            blockExplorerUrls: [
+              'https://explorer.shibchain.io'
+            ],
+            nativeCurrency: {
+              name: 'SHIB',
+              symbol: 'SHIB',
+              decimals: 18
+            }
+          }]
+        })
+      } catch (error) {
+        console.error('Error adding SHIBCHAIN chain:', error);
+      }
+    } else {
+      console.error('MetaMask not detected');
+    }
   }
 
   // useEffect(() => {
