@@ -10,6 +10,33 @@ import Frame2Icon from '../../assets/Frame2.svg';
 
 const InfoDialog = (props) => {
     const { isModalOpen, handleOk, handleCancel } = props;
+
+    const addNetwork = () => {
+        const chainIdDecimal = 117722;
+        const chainIdHex = '0x' + chainIdDecimal.toString(16);
+        window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+                chainId: chainIdHex,
+                chainName: "SHIBCHAIN",
+                rpcUrls: [
+                    'https://zkevm.shibchain.io',
+                ],
+                // iconUrls: [
+                //     'https://testnet.hecoinfo.com/favicon.png'
+                // ],
+                blockExplorerUrls: [
+                    'https://explorer.shibchain.io'
+                ],
+                nativeCurrency: {
+                    name: 'SHIB',
+                    symbol: 'SHIB',
+                    decimals: 18
+                }
+            }]
+        })
+    }
+
     const CustomCloseIcon = () => (
         <img src={close} alt="Close Icon" />
     );
@@ -56,7 +83,7 @@ const InfoDialog = (props) => {
                     </div>
                     <div className='footer'>
                         <div className="item">
-                            <img src={Frame1Icon} />
+                            <img src={Frame1Icon} className='hand' onClick={() => addNetwork()} />
                         </div>
                         <div className="item">
                             <img src={Frame2Icon} />

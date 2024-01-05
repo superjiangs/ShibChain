@@ -59,6 +59,32 @@ const BasicLayout = (props) => {
     setIsLanguage(false)
   };
 
+  const addNetwork = () => {
+    const chainIdDecimal = 117722;
+    const chainIdHex = '0x' + chainIdDecimal.toString(16);
+    window.ethereum.request({
+      method: 'wallet_addEthereumChain',
+      params: [{
+        chainId: chainIdHex,
+        chainName: "SHIBCHAIN",
+        rpcUrls: [
+          'https://zkevm.shibchain.io',
+        ],
+        // iconUrls: [
+        //     'https://testnet.hecoinfo.com/favicon.png'
+        // ],
+        blockExplorerUrls: [
+          'https://explorer.shibchain.io'
+        ],
+        nativeCurrency: {
+          name: 'SHIB',
+          symbol: 'SHIB',
+          decimals: 18
+        }
+      }]
+    })
+  }
+
   // useEffect(() => {
   //   const container = containerRef.current;
   //   const element = dogeRef.current;
@@ -115,7 +141,7 @@ const BasicLayout = (props) => {
               <div className={styles.h2}>shibchain</div>
             </div>
             <div className={styles.navs_right}>
-              <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" ><FormattedMessage id="home.nav.Token" /></a>
+              {/* <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" ><FormattedMessage id="home.nav.Token" /></a> */}
               <a href='https://bridge.shibchain.io/' target="_blank" ><FormattedMessage id="home.nav.Bridge" /></a>
               <a href='https://explorer.shibchain.io/' target="_blank" ><FormattedMessage id="home.nav.Explorer" /></a>
               <a href='https://linktr.ee/shibchainl2' target="_blank" className={styles.Community} ><FormattedMessage id="home.nav.Community" /></a>
@@ -152,7 +178,7 @@ const BasicLayout = (props) => {
             {
               !isLanguage ? (
                 <>
-                  <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" >Token</a>
+                  {/* <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" >Token</a> */}
                   <a href='https://bridge.shibchain.io/' target="_blank" ><FormattedMessage id="home.nav.Bridge" /></a>
                   <a href='https://explorer.shibchain.io/' target="_blank" ><FormattedMessage id="home.nav.Explorer" /></a>
                   <a href='https://linktr.ee/shibchainl2' target="_blank" ><FormattedMessage id="home.nav.Community" /></a>
@@ -206,7 +232,7 @@ const BasicLayout = (props) => {
                 </div>
                 <div className={styles.footer}>
                   <div className={styles.item}>
-                    <img src={Frame1Icon} />
+                    <img src={Frame1Icon} onClick={() => addNetwork()} />
                   </div>
                   <div className={styles.item}>
                     <img src={Frame2Icon} />
@@ -226,11 +252,11 @@ const BasicLayout = (props) => {
             <h4><FormattedMessage id="home.banner.Subtitle" /></h4>
             <div className={styles.btns}>
               <a target="_blank" className={styles.btn1} onClick={showModal}><FormattedMessage id="home.banner.btn1" /></a>
-              <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" className={styles.btn2}><FormattedMessage id="home.banner.btn2" /></a>
+              {/* <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" className={styles.btn2}><FormattedMessage id="home.banner.btn2" /></a> */}
             </div>
             <div className={styles.btnsH5}>
               <a target="_blank" className={styles.btn1} onClick={() => setMainnetInfoH5(true)}><FormattedMessage id="home.banner.btn1" /></a>
-              <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" className={styles.btn2}><FormattedMessage id="home.banner.btn2" /></a>
+              {/* <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank" className={styles.btn2}><FormattedMessage id="home.banner.btn2" /></a> */}
             </div>
           </div>
           <div className={styles.banner_right}>
@@ -333,7 +359,7 @@ const BasicLayout = (props) => {
             <h4><FormattedMessage id="home.footer.version" /></h4>
           </div>
           <div className={styles.right}>
-            <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank"><FormattedMessage id="home.footer.Token" /></a>
+            {/* <a href='https://etherscan.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce' target="_blank"><FormattedMessage id="home.footer.Token" /></a> */}
             <a href='https://bridge.shibchain.io/' target="_blank" ><FormattedMessage id="home.footer.Bridge" /></a>
             <a href='https://explorer.shibchain.io/' target="_blank" ><FormattedMessage id="home.footer.Explorer" /></a>
             <div className={styles.imgs}>
