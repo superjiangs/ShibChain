@@ -6,8 +6,11 @@ import join_bg_h5 from '../assets/join_bg_h5.png';
 import doges from '../assets/doge.svg';
 import stars from '../assets/stars.png';
 import rowOne from '../assets/rowOne.svg';
+import rowOneh5 from '../assets/rowOneh5.svg';
 import rowTwo from '../assets/rowTwo.svg';
+import rowTwoh5 from '../assets/rowTwoh5.svg';
 import rowThree from '../assets/rowThree.svg';
+import rowThreeh5 from '../assets/rowThreeh5.svg';
 import link1 from '../assets/link1.svg';
 import link2 from '../assets/link2.svg';
 import link3 from '../assets/link3.svg';
@@ -284,14 +287,14 @@ const BasicLayout = (props) => {
               <h2><FormattedMessage id="home.rowOne.title" /></h2>
               <h5><FormattedMessage id="home.rowOne.Subtitle" /></h5>
             </div>
-            <img className={styles.img1_h5} src={rowOne} />
+            <img className={styles.img1_h5} src={rowOneh5} />
           </div>
           <div className={styles.rowTwo}>
             <div className={styles.left}>
               <h2><FormattedMessage id="home.rowTwo.title" /></h2>
               <h5><FormattedMessage id="home.rowTwo.Subtitle" /></h5>
             </div>
-            <img className={styles.img2} src={rowTwo} />
+            <img className={styles.img2} src={rowTwoh5} />
           </div>
           <div className={styles.rowOne}>
             <img className={styles.img3} src={rowThree} />
@@ -299,7 +302,7 @@ const BasicLayout = (props) => {
               <h2><FormattedMessage id="home.rowThree.title" /></h2>
               <h5><FormattedMessage id="home.rowThree.Subtitle" /></h5>
             </div>
-            <img className={styles.img3_h5} src={rowThree} />
+            <img className={styles.img3_h5} src={rowThreeh5} />
           </div>
         </div>
       </div>
